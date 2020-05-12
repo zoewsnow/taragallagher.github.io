@@ -1,6 +1,6 @@
 # About
 
-Source code for (whatever our site/name is, for now it's [taragallagher.github.io].
+Source code for (whatever our site/name is, for now it's https://taragallagher.github.io/).
 
 # Project
 
