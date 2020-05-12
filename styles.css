@@ -4,19 +4,12 @@
     margin: 0;
 }
 
-body {
-    background-color: white;
-    min-height: 75rem;
-    padding-top: 4.5rem;
-    cursor: pointer;
-  }
-
 h3 {
-  margin: 50px 0 20px 0;
+  margin: 4rem 0 1.5rem 0;
 }
 
 h5 {
-  margin: 20px 0 20px 0;
+  margin: 1.5rem 0 1.5rem 0;
 }
 
 h6 {
@@ -25,14 +18,13 @@ h6 {
 }
 
 main {
-  margin: 0 75px 75px 75px;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
 }
 
 .dot {
-  float: inline;
   height: 25px;
   width: 25px;
-  margin: 5px;
   border-radius: 50%;
 }
 
@@ -76,11 +68,11 @@ a:hover {
 
 #map_composite_id { 
     height: 80vh;
-    margin: 50px 0 50px 0;
+    margin: 3rem 0 3rem 0;
 }
 #map_score1id { 
   height: 50vh;
-  margin: 0 0 50px 0;
+  margin: 0 0 3rem 0;
 }
 
 #map_score2id { 
@@ -143,10 +135,6 @@ a:hover {
     opacity: 1;
 }
 
-  .myaccordion {
-    max-width: 100%;
-  }
-   
   .myaccordion .card {
     border: none;
   }
@@ -154,7 +142,7 @@ a:hover {
   .myaccordion .card-header {
     border-bottom-color: #EDEFF0;
     background: transparent;
-    align-items: left;
+    text-align: left;
   }
    
   .myaccordion .fa-stack {
@@ -166,7 +154,8 @@ a:hover {
     width: 100%;
     /* font-weight: bold; */
     color: black;
-    padding: 0;
+    padding: 0; 
+    text-align: left;
   }
    
   .myaccordion .btn-link:hover,
@@ -178,6 +167,18 @@ a:hover {
     margin-top: 10px;
   }
   
+  .accordionbutton:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .accordionbutton.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+
   #topbutton {
     display: none; 
     position: fixed; 

@@ -9,6 +9,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token='
 }).addTo(map_score2);
 
 L.geoJson(statesData,{weight: 1}).addTo(map_score2);
+map_score2.scrollWheelZoom.disable();
 
 function getColor2(d) {
     return d == "Inaccessible or banned" ? '#bd0026' :

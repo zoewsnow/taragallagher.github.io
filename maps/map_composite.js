@@ -9,6 +9,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token='
 }).addTo(map_composite);
 
 L.geoJson(statesData,{weight: 1}).addTo(map_composite);
+map_composite.scrollWheelZoom.disable();
 
 function getColor_comp(d) {
     return d > 8  ? '#bd0026' :

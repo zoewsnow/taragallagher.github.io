@@ -9,6 +9,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token='
 }).addTo(map_score1);
 
 L.geoJson(statesData,{weight: 1}).addTo(map_score1);
+map_score1.scrollWheelZoom.disable();
 
 function getColor1(d) {
     return d == "Non-essential" ? '#bd0026' :
