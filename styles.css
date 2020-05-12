@@ -177,15 +177,19 @@ a:hover {
   }
   
   .accordionbutton:after {
-    content: '\02795'; /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
-    color: #777;
+    content: '\002B'; /* Unicode character for "plus" sign (+) */
+    font-size: 20px;
+    color: black;
     float: right;
     margin-left: 5px;
   }
   
   .accordionbutton.active:after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
+    content: "\2212"; /* Unicode character for "minus" sign (-) */
+    font-size: 20px;
+    color: black;
+    float: right;
+    margin-left: 5px;
   }
 
   #topbutton {
@@ -209,6 +213,11 @@ a:hover {
     background-color: #333; /* Add a dark-grey background on hover */
   }
 
+  .horiz-scroll {
+    overflow: auto;
+    overflow-y: hidden;
+    /* white-space: nowrap; */
+  }
   .about-container {
     margin: 0 6rem 0 6rem;
     justify-content: center;
