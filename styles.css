@@ -4,6 +4,11 @@
     margin: 0;
 }
 
+.navbar-brand
+{
+  font-size: 25px;
+}
+
 h3 {
   margin: 4rem 0 1.5rem 0;
 }

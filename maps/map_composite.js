@@ -100,7 +100,7 @@ info.onAdd = function (map_composite) {
 
 // method that we will use to update the control based on feature properties passed
 info.update = function (props) {
-    this._div.innerHTML = '<h4>State Index</h4>' +  (props ?
+    this._div.innerHTML = '<h4>Restriction Score</h4>' +  (props ?
         '<b>' + props.name + '</b><br />' + 'Score: ' + props.score_composite + '/9'
         : 'Hover over a state to view its score, or click for its full profile.');
 };
