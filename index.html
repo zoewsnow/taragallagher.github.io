@@ -93,8 +93,8 @@
             <div class="card">
               <div class="card-header" id="headingOne">
                 <h2 class="mb-0">
-                  <button class="accordionbutton d-flex align-items-left justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                    Why this project?
+                  <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <i class="fa fa-plus"></i>Why this project?
                   </button>
                 </h2>
               </div>
@@ -108,8 +108,8 @@
             <div class="card">
               <div class="card-header" id="headingTwo">
                 <h2 class="mb-0">
-                  <button class="accordionbutton d-flex align-items-left justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Map 1: COVID-19 Abortion Restriction Score
+                  <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <i class="fa fa-plus"></i>Map 1: COVID-19 Abortion Restriction Score
                   </button>
                 </h2>
               </div>
@@ -131,8 +131,8 @@
             <div class="card">
               <div class="card-header" id="headingThree">
                 <h2 class="mb-0">
-                  <button class="accordionbutton d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Map 2: Definition of Abortion Services According to COVID-19 Executive Orders
+                  <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <i class="fa fa-plus"></i>Map 2: Definition of Abortion Services According to COVID-19 Executive Orders
                   </button>
                 </h2>
               </div>
@@ -151,8 +151,8 @@
             <div class="card">
               <div class="card-header" id="headingFour">
                 <h2 class="mb-0">
-                  <button class="accordionbutton d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                    Map 3: Availability of Abortion Services
+                  <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <i class="fa fa-plus"></i> Map 3: Availability of Abortion Services
                   </button>
                 </h2>
               </div>
@@ -171,8 +171,8 @@
             <div class="card">
               <div class="card-header" id="headingFive">
                 <h2 class="mb-0">
-                  <button class="accordionbutton d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                    Resources
+                  <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    <i class="fa fa-plus"></i>Resources
                   </button>
                 </h2>
               </div>
@@ -191,24 +191,22 @@
             </div>
           </div>
        
-          
-          <script>
-            var coll = document.getElementsByClassName("accordionbutton");
-            var i;
-            
-            for (i = 0; i < coll.length; i++) {
-              coll[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.maxHeight){
-                  content.style.maxHeight = null;
-                } else {
-                  content.style.maxHeight = content.scrollHeight + "px";
-                }
-              });
-            }
-            </script>
-            
+      <script>
+           $(document).ready(function(){
+        // Add minus icon for collapse element which is open by default
+        $(".collapse.show").each(function(){
+        	$(this).prev(".card-header").find(".fa").addClass("fa-minus").removeClass("fa-plus");
+        });
+        
+        // Toggle plus minus icon on show hide of collapse element
+        $(".collapse").on('show.bs.collapse', function(){
+        	$(this).prev(".card-header").find(".fa").removeClass("fa-plus").addClass("fa-minus");
+        }).on('hide.bs.collapse', function(){
+        	$(this).prev(".card-header").find(".fa").removeClass("fa-minus").addClass("fa-plus");
+        });
+    });
+      </script>    
+         
 
 <!-- Accordion -->
    

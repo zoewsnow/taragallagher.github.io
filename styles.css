@@ -152,23 +152,26 @@ a:hover {
   .myaccordion .card {
     border: none;
   }
-   
+
+  .myaccordion .fa {
+    margin-right: 1em;
+  }
+
   .myaccordion .card-header {
     border-bottom-color: #EDEFF0;
     background: transparent;
-    text-align: left;
   }
    
   .myaccordion .fa-stack {
     font-size: 18px;
+    margin-right: 50px;
   }
    
   .myaccordion .btn {
     font-size: 20px;
-    width: 100%;
-    /* font-weight: bold; */
     color: black;
-    padding: 0; 
+    padding: 0;
+    margin-left: 0;
     text-align: left;
   }
    
@@ -179,24 +182,6 @@ a:hover {
    
   .myaccordion li + li {
     margin-top: 10px;
-  }
-  
-  .accordionbutton:after {
-    content: '\002B'; /* Unicode character for "plus" sign (+) */
-    font-size: 20px;
-    color: black;
-    position: absolute;
-    right: 0;
-    margin-left: 5px;
-  }
-  
-  .accordionbutton.active:after {
-    content: "\2212"; /* Unicode character for "minus" sign (-) */
-    font-size: 20px;
-    color: black;
-    position: absolute;
-    right: 0;
-    margin-left: 5px;
   }
 
   #topbutton {
